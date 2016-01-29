@@ -87,8 +87,8 @@ def do_part_download(args):
         else:
             time.sleep(3)
             current_tries += 1
-            do_part_download(bucket_name, key_name, fname, min_byte,
-                             max_byte, split, secure, max_tries, current_tries)
+            do_part_download((bucket_name, key_name, fname, min_byte,
+                             max_byte, split, secure, max_tries, current_tries))
 
 
 def gen_byte_ranges(size, num_parts):
